@@ -44,6 +44,17 @@ let once = (node, type, handler, useCapture) => {
     node.addEventListener(type, fun, useCapture);
 };
 
+let getAttributeMap = (attributes = []) => {
+    let map = {};
+    for (let i = 0; i < attributes.length; i++) {
+        let {
+            name, value
+        } = attributes[i];
+        map[name] = value;
+    }
+    return map;
+};
+
 module.exports = {
     getX,
     getY,
@@ -51,5 +62,6 @@ module.exports = {
     getClientY,
     removeChilds,
     once,
-    shadowFrame
+    shadowFrame,
+    getAttributeMap
 };
