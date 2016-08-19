@@ -2,6 +2,8 @@
 
 let shadowFrame = require('./lib/shadowFrame');
 
+let startMomenter = require('./lib/startMomenter.js');
+
 let getX = (elem) => {
     var x = 0;
     while (elem) {
@@ -63,5 +65,6 @@ module.exports = {
     removeChilds,
     once,
     shadowFrame,
-    getAttributeMap
+    getAttributeMap,
+    startMomenter
 };
