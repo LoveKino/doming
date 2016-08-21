@@ -57,6 +57,19 @@ let getAttributeMap = (attributes = []) => {
     return map;
 };
 
+let getClasses = (clz = '') => {
+    let ret = [];
+    let items = clz.split(' ');
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i];
+        item = item.trim();
+        if (item) {
+            ret.push(item);
+        }
+    }
+    return ret;
+};
+
 module.exports = {
     getX,
     getY,
@@ -66,5 +79,6 @@ module.exports = {
     once,
     shadowFrame,
     getAttributeMap,
-    startMomenter
+    startMomenter,
+    getClasses
 };
