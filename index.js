@@ -70,6 +70,13 @@ let getClasses = (clz = '') => {
     return ret;
 };
 
+let isMobile = () => {
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+    return true;
+  }
+    return false;
+}
+
 module.exports = {
     getX,
     getY,
@@ -80,5 +87,6 @@ module.exports = {
     shadowFrame,
     getAttributeMap,
     startMomenter,
-    getClasses
+    getClasses,
+    isMobile
 };
