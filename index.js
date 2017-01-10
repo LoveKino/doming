@@ -71,17 +71,23 @@ let getClasses = (clz = '') => {
 };
 
 let isMobile = () => {
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    return true;
-  }
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true;
+    }
     return false;
-}
+};
+
+let getWindowWidth = () => window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+let getWindowHeight = () => window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
 module.exports = {
     getX,
     getY,
     getClientX,
     getClientY,
+    getWindowWidth,
+    getWindowHeight,
     removeChilds,
     once,
     shadowFrame,
